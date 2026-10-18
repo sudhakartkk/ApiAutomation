@@ -122,7 +122,7 @@ public class SampleApiTest extends BaseTest {
             System.out.println("quantity : "+ item.get("quantity"));
         }
 
-        //List<Map<String,Object>> carts = response.getBody().jsonPath().getList("");
+        List<Map<String,Object>> carts = response.getBody().jsonPath().getList("");
 
         for(Map<String,Object> cart : carts){
             assertThat(cart.get("cart_id")).isInstanceOf(Number.class);
